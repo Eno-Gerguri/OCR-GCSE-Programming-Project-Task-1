@@ -1,12 +1,11 @@
 class User:
-    
+
     def __init__(self, Username, Password):
-
         self.Username = Username
-        self.Password = Password 
+        self.Password = Password
 
 
-def  Authenticate_User():
+def Authenticate_User():
     username_is_correct = False
     password_is_correct = False
 
@@ -20,16 +19,16 @@ def  Authenticate_User():
 
         for line in f:
 
-           count += 1
+            count += 1
 
-           if count % 2 != 0:
+            if count % 2 != 0:
 
-               if line == Entered_Username:
-                   username_is_correct = True
+                if line == Entered_Username:
+                    username_is_correct = True
 
                 elif line != Entered_Username:
                     pass
-            
+
             elif count % 2 == 0:
                 pass
 
@@ -58,6 +57,14 @@ def  Authenticate_User():
 
     elif username_is_correct is False:
         print("\n\nUsername is Incorrect\n\n")
+        Authenticate_User()
+
+    if password_is_correct is True:
+        # Do the next part
+        pass
+
+    elif password_is_correct is False:
+        print("\n\nPassword is Incorrect\n\n")
         Authenticate_User()
 
 
