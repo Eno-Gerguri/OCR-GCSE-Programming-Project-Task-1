@@ -38,7 +38,7 @@ a song incorrectly on the second chance.
 
 Sections of code are splitted with double closers:
 
-===============================================================================
+===============================================================================  
 ===============================================================================
 
 Sections within sections are splitted with one closer:
