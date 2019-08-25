@@ -1,7 +1,7 @@
 # OCR-GCSE-Programming-Project-Task-1-for-practise-
 https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-june-2020.pdf
 
-##Task
+<h2>##Task<h2>
 
 Noel is creating a music quiz game.
 
@@ -9,7 +9,7 @@ The game stores a list of song names and their artist
 (e.g. the band or solo artist name). The player needs to
 try and guess the song name.
 
-The game is played as follows:
+<h3>The game is played as follows:<h3>
 
 •   A random song name and artist are chosen.
 •   The artist and the first letter of each word in the song title are displayed.
@@ -21,7 +21,7 @@ the answer correctly the second time they score 1 point. The game repeats.
 Only authorised players are allowed to play the game.
 Where appropriate, input from the user should be validated.
 
-Design, develop, test and evaluate a system (using python) that:
+<h3>Design, develop, test and evaluate a system (using python) that:<h3>
 
 1. Allows a player to enter their details, which are then authenticated to ensure that they are an
 authorised player.
@@ -34,6 +34,6 @@ a song incorrectly on the second chance.
 7. Stores the name of the player and their score in an external file.
 8. Displays the score and player name of the top 5 winning scores from the external file.
 
-##Comments about code
+<h2>##Comments about code<h2>
 
 One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read. 
