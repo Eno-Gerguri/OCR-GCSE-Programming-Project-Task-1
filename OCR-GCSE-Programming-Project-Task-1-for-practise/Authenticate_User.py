@@ -3,6 +3,7 @@ usernames_and_passwords = []  # This list stores the users and their passwords f
 
 
 # ======================================================================================================================
+# ======================================================================================================================
 
 def get_usernames_and_passwords():
     """
@@ -29,16 +30,36 @@ def get_usernames_and_passwords():
 
 
 # ======================================================================================================================
+# ======================================================================================================================
 
 def sign_up_user():
+    """
+    This writes in the, "usernames_and_passwords" list into, "Users.txt" line by line for each item in the list
+    """
+
     with open("Users.txt", "w") as f:
+
         for item in usernames_and_passwords:
+
             f.write("%s\n" % item)
 
 
 # ======================================================================================================================
+# ======================================================================================================================
 
 def authenticate_user():
+    """
+    If, "Users.txt" is empty then the user is prompted to make a new account that will be saved.
+
+    If, "Users.txt" is not empty then the user is prompted to enter their username and password
+    and if they are correct are successfully logged into the game.
+
+    If, the user does not have an account they type in "Sign Up" to make an account for themselves.
+    """
+
+# ======================================================================================================================
+    # This section of code is activated if it is the first time this program is being run
+
     if len(usernames_and_passwords) == 0:
         print("Welcome to the music game!\n\n")
 
@@ -53,6 +74,8 @@ def authenticate_user():
         sign_up_password_check = input("Re-enter your password: ")
 
         if sign_up_password == sign_up_password_check:
+            # The, "usernames_and_passwords" list acts as a bridge between the, "Users.txt" file and the code
+
             usernames_and_passwords.append(sign_up_username)
 
             usernames_and_passwords.append(sign_up_password)
@@ -63,11 +86,14 @@ def authenticate_user():
 
         elif sign_up_password != sign_up_password_check:
             print("\n\nPasswords do not match\n\n")
-            
+
             authenticate_user()
 
-    username_is_correct = False
-    password_is_correct = False
+# ======================================================================================================================
+    # This section of code prompts the user to type in their details
+
+    username_is_correct = False  # Username is automatically set to incorrect to simplify code
+    password_is_correct = False  # Password is automatically set to incorrect to simplify code
 
     print("Welcome to the music game!\n\n")
 
@@ -75,7 +101,7 @@ def authenticate_user():
 
     for i, line in enumerate(usernames_and_passwords):
 
-        if i % 2 == 0:
+        if i % 2 == 0:  # Usernames are located on the even spots of the list
 
             if line == entered_username:
                 username_is_correct = True
@@ -86,7 +112,7 @@ def authenticate_user():
 
         for i, line in enumerate(usernames_and_passwords):
 
-            if i % 2 != 0:
+            if i % 2 != 0:  # Passwords are located on the odd spots of the list
 
                 if line == entered_password:
                     password_is_correct = True
@@ -99,7 +125,7 @@ def authenticate_user():
 
     if password_is_correct:
 
-        print("\n\nLogin Successful!\n\n")  # Do the next part
+        pass  # Will automatically call the next function in, "Main_Script.py" It is the only way out of this function
 
     elif password_is_correct is False:
 
@@ -107,4 +133,5 @@ def authenticate_user():
 
         authenticate_user()
 
+# ======================================================================================================================
 # ======================================================================================================================
