@@ -30,9 +30,31 @@ def get_usernames_and_passwords():
 
 # ======================================================================================================================
 
+def sign_up_user():
+    with open("lists.txt", "w") as f:
+        for item in usernames_and_passwords:
+            f.write("%s\n" % item)
+
 # ======================================================================================================================
 
 def authenticate_user():
+    if len(usernames_and_passwords) == 0:
+        print("Welcome to the music game!\n\n")
+        print("I have detected it is your first time here\n\n")
+        print("Sign up:\n\n")
+        sign_up_username = input("Enter your new Username: ")
+        sign_up_password = input("Enter your new Password: ")
+        sign_up_password_check = input("Re-enter your password: ")
+
+        if sign_up_password == sign_up_password_check:
+            usernames_and_passwords.append(sign_up_username)
+            usernames_and_passwords.append(sign_up_password)
+            sign_up_user()
+
+        elif sign_up_password != sign_up_password_check:
+            print("\n\nPasswords do not match\n\n")
+            authenticate_user()
+
     username_is_correct = False
     password_is_correct = False
 
