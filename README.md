@@ -26,7 +26,7 @@ Design, develop, test and evaluate a system (using python and no external module
 1. Allows a player to enter their details, which are then authenticated to ensure that they are an
 authorised player.
 2. Stores a list of song names and artists in an external file.
-3. Selects a song from the file, displaying the artist and the first letter of each word of the song title.
+3. Randomly selects a song from the file, displaying the artist and the first letter of each word of the song title.
 4. Allows the user up to two chances to guess the name of the song, stopping the game if they guess
 a song incorrectly on the second chance.
 5. If the guess is correct, add the points to the player’s score depending on the number of guesses.
@@ -49,6 +49,9 @@ Sections within sections are splitted with one closer:
 This is in order to make reading the code easier and make the sections of sections of code easier to find, modify, read, and understand
 
 One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read.
+
+One import was necessary and that was the, "randint" function from the random module built into python. It was absolutely unavoidable
+as I had to randomly generate a number to pick a song from the list.
 
 ##Bugs
 

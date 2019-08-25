@@ -33,4 +33,3 @@ def get_artists_and_songs():
 
 def start_music_game():
     print("Music Game!\n\n")
-    
