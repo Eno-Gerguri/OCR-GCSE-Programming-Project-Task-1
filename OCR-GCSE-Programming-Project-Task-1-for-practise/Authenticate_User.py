@@ -50,10 +50,8 @@ def sign_up_user():
 def authenticate_user():
     """
     If, "Users.txt" is empty then the user is prompted to make a new account that will be saved.
-
     If, "Users.txt" is not empty then the user is prompted to enter their username and password
     and if they are correct are successfully logged into the game.
-
     If, the user does not have an account they type in "Sign Up" to make an account for themselves.
     """
 
@@ -125,7 +123,7 @@ def authenticate_user():
 
     if password_is_correct:
 
-        pass  # Will automatically call the next function in, "Main_Script.py" It is the only way out of this function
+        print("\n\nSuccessfully logged in!\n\n")  # Will automatically call the next function in, "Main_Script.py" It is the only way out of this function
 
     elif password_is_correct is False:
 
