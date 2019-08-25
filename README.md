@@ -1,15 +1,7 @@
 # OCR-GCSE-Programming-Project-Task-1-for-practise-
 https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-june-2020.pdf
 
-<<<<<<< HEAD
 ##Task
-=======
-####Contents:
-
-
-
-##Task
->>>>>>> d9f34f163dab2aa12e49d8f395098bcc18de0eaf
 
 Noel is creating a music quiz game.
 
