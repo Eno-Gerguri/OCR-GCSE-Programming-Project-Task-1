@@ -33,3 +33,7 @@ a song incorrectly on the second chance.
 6. Displays the number of points the player has when the game ends.
 7. Stores the name of the player and their score in an external file.
 8. Displays the score and player name of the top 5 winning scores from the external file.
+
+##Comments about code
+
+One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read. 
