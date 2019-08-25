@@ -53,6 +53,13 @@ One of the things I did with the code is that instead of putting "else:" stateme
 ##Bugs
 
 Rare Issue:
-When logging in you have a very small chance to start looping and break the program. If this happens please restart the program   Why is it caused?
-the, "Return" statements in, "Authenticate_User.py" on lines '90' and '100' sometime do not run correctly causing this bug
 
+When logging in you have a very small chance to start looping seemingly endlessly and break the program.
+
+Why is it caused?
+
+The, "Return" statements in, "Authenticate_User.py" on lines '90' and '100' sometime do not run correctly causing this bug for everytime you trigger that code you loop through one more time
+
+Solution:
+
+If this happens please restart the program.
