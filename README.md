@@ -11,12 +11,12 @@ try and guess the song name.
 
 The game is played as follows:
 
-•   A random song name and artist are chosen.
-•   The artist and the first letter of each word in the song title are displayed.
-•   The user has two chances to guess the name of the song.
+•   A random song name and artist are chosen.  
+•   The artist and the first letter of each word in the song title are displayed.  
+•   The user has two chances to guess the name of the song.  
 •   If the user guesses the answer correctly the first time, they score 3 points. If the user guesses
-the answer correctly the second time they score 1 point. The game repeats.
-•   The game ends when a player guesses the song name incorrectly the second time.
+the answer correctly the second time they score 1 point. The game repeats.  
+•   The game ends when a player guesses the song name incorrectly the second time.  
 
 Only authorised players are allowed to play the game.
 Where appropriate, input from the user should be validated.
