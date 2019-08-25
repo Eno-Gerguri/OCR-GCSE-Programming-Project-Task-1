@@ -49,21 +49,21 @@ def sign_up_user():
 
 def authenticate_user():
     """
-    If, "Users.txt" is empty then the user is prompted to make a new account that will be saved.
-    If, "Users.txt" is not empty then the user is prompted to enter their username and password
-    and if they are correct are successfully logged into the game.
-    If, the user does not have an account they type in "Sign Up" to make an account for themselves.
+    Users are prompted to sign in or create an account.
+    Creating an account will store their details onto, "Users.txt"
+    Signing in will prompt them to enter their username and password,
+    which will both be checked to see if they are correct,
+    if they are the user will now be able to begin the game
     """
 
 # ======================================================================================================================
     # This section of code is activated if it is the first time this program is being run
 
-    if len(usernames_and_passwords) == 0:
-        print("Welcome to the music game!\n\n")
+    print("Welcome to the music game!\n\n")
+    sign_in_or_create_account_option = input("Sign in\nCreate an account\n\n")
 
-        print("I have detected it is your first time here\n\n")
-
-        print("Sign up:\n\n")
+    if sign_in_or_create_account_option.lower().strip().replace(" ", "") == "createanaccount":
+        print("\n\nSign up:\n\n")
 
         sign_up_username = input("Enter your new Username: ")
 
@@ -87,13 +87,24 @@ def authenticate_user():
 
             authenticate_user()
 
+            return  # Return is there so the second half of this function is not looped through once it ends
+
+    elif sign_in_or_create_account_option.lower().strip().replace(" ", "") == "signin":
+        print("\n\n")  # Will automatically move onto the sign-in page
+
+    else:
+        print("\n\nSorry that is invalid. Try checking your spelling.\n\n")
+
+        authenticate_user()
+
+        return  # Return is there so the second half of this function is not looped through once it ends
+
+
 # ======================================================================================================================
     # This section of code prompts the user to type in their details
 
     username_is_correct = False  # Username is automatically set to incorrect to simplify code
     password_is_correct = False  # Password is automatically set to incorrect to simplify code
-
-    print("Welcome to the music game!\n\n")
 
     entered_username = input("Enter your Username: ")
 
@@ -123,7 +134,7 @@ def authenticate_user():
 
     if password_is_correct:
 
-        print("\n\nSuccessfully logged in!\n\n")  # Will automatically call the next function in, "Main_Script.py" It is the only way out of this function
+        print("\n\nSuccessfully logged in!\n\n")  # Will automatically call the next function in, "Main_Script.py"
 
     elif password_is_correct is False:
 

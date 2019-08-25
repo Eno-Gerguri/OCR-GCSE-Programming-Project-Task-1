@@ -8,3 +8,5 @@ get_usernames_and_passwords()
 # ======================================================================================================================
 
 authenticate_user()
+
+print("This should have run afterwords")

@@ -21,7 +21,7 @@ the answer correctly the second time they score 1 point. The game repeats.
 Only authorised players are allowed to play the game.
 Where appropriate, input from the user should be validated.
 
-Design, develop, test and evaluate a system (using python) that:
+Design, develop, test and evaluate a system (using python and no external modules) that:
 
 1. Allows a player to enter their details, which are then authenticated to ensure that they are an
 authorised player.
@@ -49,3 +49,10 @@ Sections within sections are splitted with one closer:
 This is in order to make reading the code easier and make the sections of sections of code easier to find, modify, read, and understand
 
 One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read.
+
+##Bugs
+
+Rare Issue:
+When logging in you have a very small chance to start looping and break the program. If this happens please restart the program   Why is it caused?
+the, "Return" statements in, "Authenticate_User.py" on lines '90' and '100' sometime do not run correctly causing this bug
+
