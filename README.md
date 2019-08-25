@@ -2,7 +2,7 @@
 https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-june-2020.pdf
 
 <<<<<<< HEAD
-<h2>##Task<h2>
+##Task
 =======
 ####Contents:
 
@@ -17,7 +17,7 @@ The game stores a list of song names and their artist
 (e.g. the band or solo artist name). The player needs to
 try and guess the song name.
 
-###The game is played as follows:
+The game is played as follows:
 
 •   A random song name and artist are chosen.
 •   The artist and the first letter of each word in the song title are displayed.
@@ -29,7 +29,7 @@ the answer correctly the second time they score 1 point. The game repeats.
 Only authorised players are allowed to play the game.
 Where appropriate, input from the user should be validated.
 
-###Design, develop, test and evaluate a system (using python) that:
+Design, develop, test and evaluate a system (using python) that:
 
 1. Allows a player to enter their details, which are then authenticated to ensure that they are an
 authorised player.
@@ -42,7 +42,7 @@ a song incorrectly on the second chance.
 7. Stores the name of the player and their score in an external file.
 8. Displays the score and player name of the top 5 winning scores from the external file.
 
-####Comments about code
+##Comments about code
 
 Sections of code are splitted with double closers:
 
