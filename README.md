@@ -1,6 +1,10 @@
 # OCR-GCSE-Programming-Project-Task-1-for-practise-
 https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-june-2020.pdf
 
+####Contents:
+
+
+
 ##Task
 
 Noel is creating a music quiz game.
@@ -36,4 +40,15 @@ a song incorrectly on the second chance.
 
 ##Comments about code
 
-One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read. 
+Sections of code are splitted with double closers:
+
+# ======================================================================================================================================
+# ======================================================================================================================================
+
+Sections within sections are splitted with one closer:
+
+# ======================================================================================================================================
+
+This is in order to make reading the code easier and make the sections of sections of code easier to find, modify, read, and understand
+
+One of the things I did with the code is that instead of putting "else:" statements where I could I only put them where they where necessary making "elif:" statements instead to make the code easier to read.
