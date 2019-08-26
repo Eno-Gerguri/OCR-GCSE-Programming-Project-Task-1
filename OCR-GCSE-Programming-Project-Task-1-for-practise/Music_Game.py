@@ -1,6 +1,8 @@
 from random import randint
 
-artists_and_songs = []  # This list stores the artists and their songs from, "Song_List.txt" refer to line 11
+artists_and_songs = []  # This list stores the artists and their songs from, "Song_List.txt" refer to line 13
+
+scores = []
 
 
 # ======================================================================================================================
@@ -36,7 +38,43 @@ def get_artists_and_songs():
 # ======================================================================================================================
 # ======================================================================================================================
 
-number_of_songs_and_artists = len(artists_and_songs)  # Goto line 59
+def record_score():
+    with open("Scores.txt", "a") as f:
+        f.write("%s\n" % player_points)
+
+
+# ======================================================================================================================
+# ======================================================================================================================
+
+def get_scores():
+    opening_the_list = open("Scores.txt", "r")
+
+    true_a = [line.split(",") for line in opening_the_list.readlines()]  # splits each line of the text file into a list
+
+    true_a = sum(true_a, [])
+
+    for i in true_a:
+        # Takes the extra "\n" from each string and replaces them accordingly
+
+        a = i.strip("\n")
+
+        true_a.insert(true_a.index(i), a)
+
+        true_a.remove(i)
+
+    scores.clear()
+
+    scores.extend(true_a)
+
+    opening_the_list.close()
+
+    true_scores = [int(i) for i in scores]
+
+    print(max(true_scores))
+
+
+# ======================================================================================================================
+# ======================================================================================================================
 
 number_of_songs_used = 1  # Keeps count of what song you are on
 
@@ -62,10 +100,10 @@ def start_music_game():
 
         number_of_songs_used += 1
 
-# ======================================================================================================================
-# This section of code randomly chooses the artist and the song
-
-        randomly_chosen_song = randint(0, number_of_songs_and_artists)  # picks a random number
+        # ======================================================================================================================
+        # This section of code randomly chooses the artist and the song
+        print(artists_and_songs)
+        randomly_chosen_song = randint(0, len(artists_and_songs))  # picks a random number
 
         if randomly_chosen_song % 2 != 0:  # If the number chose is not on an artist
             randomly_chosen_song = randomly_chosen_song - 1  # Put it onto that songs artist
@@ -86,7 +124,8 @@ def start_music_game():
 
         print("\n")
 
-# ======================================================================================================================
+        # ======================================================================================================================
+        # This section of code deals with point scoring and checking answers
 
         first_guess = input(random_artist + "   " + random_song_to_display + "\n\n")
         # Displays artist and song showing the first letter and replacing the rest with, "*"
@@ -107,9 +146,22 @@ def start_music_game():
             else:
                 print("\n\nYou ran out of tries!\n\n")
 
+                if player_points == 1:
+                    print("You scored " + str(player_points) + "point!\n\n")
+                else:
+                    print("You scored " + str(player_points) + "points!\n\n")
+
+                print("Top High Scores : Number Of Songs\n\n")
+
+                get_artists_and_songs()  # In order to reset the list to accurately get the number of songs in this game
+
                 record_score()
 
-                show_high_scores()
+                get_scores()
+
+                break
+
+                # show_high_scores()
 
         print("\n")
 

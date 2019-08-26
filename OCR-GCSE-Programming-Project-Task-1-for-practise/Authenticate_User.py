@@ -1,6 +1,7 @@
 # Variables
 usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 10
 
+signed_in_username = ""
 
 # ======================================================================================================================
 # ======================================================================================================================
@@ -105,18 +106,19 @@ def authenticate_user():
 
     entered_username = input("Enter your Username: ")
 
-    for i, line in enumerate(usernames_and_passwords):
+    for i, line in enumerate(usernames_and_passwords):  # "line" is the username
 
         if i % 2 == 0:  # Usernames are located on the even spots of the list
 
             if line == entered_username:
                 username_is_correct = True
+                signed_in_username = line
 
     if username_is_correct:
 
         entered_password = input("Enter your Password: ")
 
-        for i, line in enumerate(usernames_and_passwords):
+        for i, line in enumerate(usernames_and_passwords):  # "line" is the password
 
             if i % 2 != 0:  # Passwords are located on the odd spots of the list
 
@@ -129,6 +131,8 @@ def authenticate_user():
 
         authenticate_user()
 
+        return
+
     if password_is_correct:
 
         print("\n\nSuccessfully logged in!\n\n")  # Will automatically call the next function in, "Main_Script.py"
@@ -138,6 +142,8 @@ def authenticate_user():
         print("\n\nPassword is Incorrect\n\n")
 
         authenticate_user()
+
+        return
 
 # ======================================================================================================================
 # ======================================================================================================================
