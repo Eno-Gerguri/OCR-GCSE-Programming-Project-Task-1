@@ -63,6 +63,7 @@ def start_music_game():
         number_of_songs_used += 1
 
 # ======================================================================================================================
+# This section of code randomly chooses the artist and the song
 
         randomly_chosen_song = randint(0, number_of_songs_and_artists)  # picks a random number
 
@@ -106,7 +107,9 @@ def start_music_game():
             else:
                 print("\n\nYou ran out of tries!\n\n")
 
-                break
+                record_score()
+
+                show_high_scores()
 
         print("\n")
 
