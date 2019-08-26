@@ -5,7 +5,11 @@ from Music_Game import *
 
 get_usernames_and_passwords()
 
+get_artists_and_songs()
+
 
 # ======================================================================================================================
 
-authenticate_user()
+
+
+start_music_game()
