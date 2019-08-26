@@ -1,5 +1,5 @@
 # Variables
-usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 7
+usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 10
 
 
 # ======================================================================================================================
@@ -38,9 +38,7 @@ def sign_up_user():
     """
 
     with open("Users.txt", "w") as f:
-
         for item in usernames_and_passwords:
-
             f.write("%s\n" % item)
 
 
@@ -57,7 +55,7 @@ def authenticate_user():
     """
 
 # ======================================================================================================================
-    # This section of code is activated if it is the first time this program is being run
+# This section of code is activated if it is the first time this program is being run
 
     print("Welcome to the music game!\n\n")
     sign_in_or_create_account_option = input("Sign in\nCreate an account\n\n")
@@ -99,9 +97,8 @@ def authenticate_user():
 
         return  # Return is there so the second half of this function is not looped through once it ends
 
-
 # ======================================================================================================================
-    # This section of code prompts the user to type in their details
+# This section of code prompts the user to type in their details
 
     username_is_correct = False  # Username is automatically set to incorrect to simplify code
     password_is_correct = False  # Password is automatically set to incorrect to simplify code
