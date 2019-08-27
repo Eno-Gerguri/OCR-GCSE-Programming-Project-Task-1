@@ -170,9 +170,10 @@ def start_music_game():
                 print("\n\nYou ran out of tries!\n\n")
 
                 if player_points == 1:
-                    print("You scored " + str(player_points) + "point!\n\n")
+                    print("You scored " + str(player_points) + " point!\n\n")
+
                 else:
-                    print("You scored " + str(player_points) + "points!\n\n")
+                    print("You scored " + str(player_points) + " points!\n\n")
 
                 print("Top High Scores\n\n")
 
@@ -184,7 +185,26 @@ def start_music_game():
 
                 break
 
-                # show_high_scores()
+
+    if len(artists_and_songs) == 0:
+        print("\n\nYou got all of the songs correct!\n\n")
+
+        if player_points == 1:
+            print("You scored " + str(player_points) + " point!\n\n")
+
+        else:
+            print("You scored " + str(player_points) + " points!\n\n")
+
+        print("Top High Scores\n\n")
+
+        record_score()
+
+        get_scores()
+
+        print_scores()
+
+        return
+
 
         print("\n")
 
