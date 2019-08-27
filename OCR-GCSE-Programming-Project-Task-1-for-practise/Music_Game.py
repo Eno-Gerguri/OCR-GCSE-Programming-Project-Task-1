@@ -4,6 +4,8 @@ artists_and_songs = []  # This list stores the artists and their songs from, "So
 
 scores = []
 
+high_scores = []
+
 
 # ======================================================================================================================
 # ======================================================================================================================
@@ -40,7 +42,7 @@ def get_artists_and_songs():
 
 def record_score():
     with open("Scores.txt", "a") as f:
-        f.write("%s\n" % player_points)
+        f.write("%s\n" % player_points)  # Appends the players points to, "Scores.txt"
 
 
 # ======================================================================================================================
@@ -70,7 +72,29 @@ def get_scores():
 
     true_scores = [int(i) for i in scores]
 
-    print(max(true_scores))
+    for i in range(5):
+        try:
+            high_score = max(true_scores)  # Gets highest score from, "true_scores"
+
+            high_scores.append(high_score)  # Adds it to, "high_scores" list
+
+            true_scores.remove(high_score)  # Removes it from, "true_scores"
+        except ValueError:
+            high_scores.append("-")
+
+
+# ======================================================================================================================
+# ======================================================================================================================
+
+def print_scores():
+    for i in high_scores:
+        if isinstance(i, int):
+            print(str(i))
+
+        else:  # If it is a string
+            print(i)
+
+        print("\n")
 
 
 # ======================================================================================================================
@@ -102,8 +126,7 @@ def start_music_game():
 
         # ======================================================================================================================
         # This section of code randomly chooses the artist and the song
-        print(artists_and_songs)
-        randomly_chosen_song = randint(0, len(artists_and_songs))  # picks a random number
+        randomly_chosen_song = randint(0, len(artists_and_songs) - 1)  # picks a random number
 
         if randomly_chosen_song % 2 != 0:  # If the number chose is not on an artist
             randomly_chosen_song = randomly_chosen_song - 1  # Put it onto that songs artist
@@ -151,13 +174,13 @@ def start_music_game():
                 else:
                     print("You scored " + str(player_points) + "points!\n\n")
 
-                print("Top High Scores : Number Of Songs\n\n")
-
-                get_artists_and_songs()  # In order to reset the list to accurately get the number of songs in this game
+                print("Top High Scores\n\n")
 
                 record_score()
 
                 get_scores()
+
+                print_scores()
 
                 break
 
