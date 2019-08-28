@@ -265,4 +265,4 @@ This repository cannot be contributed to but you can give feedback to enogerguri
 
 ## License
 
-[This Repository is licensed under the, "BSD 3-Clause "New" or "Revised" License"](LICENSE)
+[This Repository is licensed under the, "BSD 4-Clause License"](LICENSE)
