@@ -48,7 +48,7 @@ The purpose of version 1 is to create an easier to read project meant for readin
 
 ### Installation
 
-This works for Mac, Linux and Windows and anybody can run it, nothing extra is necessary for installation. However, there are two ways to run this program. You can choose to use python to run it in the command line or you can run the .exe file, which is slower than using python to load up but performance within program is not noticable.
+This works for Mac, Linux and Windows and anybody can run it, nothing extra is necessary for installation. However, there are two ways to run this program. You can choose to use python to run it in the command line or you can run the .exe file, which is slower than using python to load up but performance within program is not noticeable.
 
 #### METHOD 1: Using Python in the Command Line
 
