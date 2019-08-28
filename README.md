@@ -5,7 +5,55 @@ The point of this project is to practise my basic python skills with a task from
 
 ## Table of Contents
 
+* [Task](#Task)
 
+* [Version 1](#Version-1)
+
+  * [Why?](#Why?)
+  
+  * [Installation](#Installation)
+  
+    * [METHOD 1: Using Python in the Command Line](#METHOD-1:-Using-Python-in-the-Command-Line)
+    
+    * [Method 2: Running the Executable](#METHOD-2:-Running-the-Executable)
+    
+  * [Editing Version 1](#Editing-Version-1)
+   
+    * [Editing Users](#Editing-Users)
+    
+      * [Making a New Account Manually](#Making-a-New-Account-Manually)
+      
+      * [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
+      
+      * [Deleting your Account Manually](#Deleting-your-Account-Manually)
+      
+    * [Editing the Song List](#Editing-the-Song-List)
+    
+      * [Adding a Song Manually](#Adding-a-Song-Manually)
+      
+      * [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
+      
+      * [Deleting your Account Manually](#Deleting-your-Account-Manually)
+      
+    * [Editing Scores](#Editing-Scores)
+    
+      * [Adding a Score Manually](#Adding-a-Score-Manually)
+      
+      * [Changing an Already Existing Score Manually](#Changing-an-Already-Existing-Score-Manually)
+      
+      * [Delete a Specific Score Manually](#Delete-a-Specific-Score-Manually)
+      
+  * [Using Version 1](#Using-Version-1)
+  
+* [Comments About Code](#Comments-About-Code)
+
+* [Bugs](#Bugs)
+
+* [Contributions](#Contributions)
+
+* [Credits](#Credits)
+
+* [License](#License)
 
 ## Task
 
@@ -64,7 +112,7 @@ This method is requires that python 3 is installed on your system. This method i
 
 You have successfully run the Python Version 1 files on your system!
 
-#### Method 2: Running the Executable
+#### METHOD 2: Running the Executable
 
 This method does not require you have anything pre-installed on your system. It is significantly slower than the other method in terms of start up time, which requires that you wait a few seconds for it to run, but performance within the program is almost identical to METHOD 1.
 
@@ -170,7 +218,21 @@ That's it, you have changed an already existing score!
 
 That's it, you have deleted a specific score!
 
-## Comments about code
+### Using Version 1
+
+Once you have installed and run the program you can start playing the game and testing it.
+
+If you find any bugs please make a pull request editing the [Bugs](#Bugs) heading with this format:
+
+Title of bug:
+
+Brief description of bug including how to replicate it and where it is caused as well as if it happens all of the time
+
+(If you have one a solution):
+
+brief description how to solve it
+
+## Comments About Code
 
 Sections of code are splitted with double closers:
 
@@ -192,3 +254,15 @@ as I had to randomly generate a number to pick a song from the list.
 ## Bugs
 
 There have been no reported bugs.
+
+## Contributions
+
+This repository cannot be contributed to but you can give feedback to enogerguri@outlook.com
+
+## Credits
+
+[Eno Gerguri](https://github.com/Eno-Gerguri "Eno Gerguri's Profile")
+
+## License
+
+[This Repository is licensed under the, "BSD 3-Clause "New" or "Revised" License"](LICENSE)
