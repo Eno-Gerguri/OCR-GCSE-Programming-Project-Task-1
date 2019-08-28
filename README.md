@@ -15,7 +15,7 @@ The point of this project is to practise my basic python skills with a task from
   
     * [METHOD 1: Using Python in the Command Line](#METHOD-1-Using-Python-in-the-Command-Line)
     
-    * [Method 2: Running the Executable](#METHOD-2-Running-the-Executable)
+    * [METHOD 2: Running the Executable](#METHOD-2-Running-the-Executable)
     
   * [Editing Version 1](#Editing-Version-1)
    
