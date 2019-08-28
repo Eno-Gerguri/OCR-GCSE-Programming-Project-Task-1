@@ -1,7 +1,6 @@
 # Variables
-usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 10
 
-signed_in_username = ""
+usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 10
 
 
 # ======================================================================================================================
@@ -113,7 +112,6 @@ def authenticate_user():
 
             if line == entered_username:
                 username_is_correct = True
-                signed_in_username = line
 
     if username_is_correct:
 

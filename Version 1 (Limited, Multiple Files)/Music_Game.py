@@ -1,10 +1,12 @@
 from random import randint
 
-artists_and_songs = []  # This list stores the artists and their songs from, "Song_List.txt" refer to line 13
+# Variables
 
-scores = []
+artists_and_songs = []  # This list stores the artists and their songs from, "Song_List.txt". Refer to line 13
 
-high_scores = []
+scores = []  # Stores all of the scores from, "Scores.txt".
+
+high_scores = []  # Stores top 5 scores from the, "scores" list.
 
 
 # ======================================================================================================================
@@ -41,6 +43,10 @@ def get_artists_and_songs():
 # ======================================================================================================================
 
 def record_score():
+    """
+    Takes in, "player_points" and appends it to, "Scores.txt".
+    """
+
     with open("Scores.txt", "a") as f:
         f.write("%s\n" % player_points)  # Appends the players points to, "Scores.txt"
 
@@ -49,6 +55,11 @@ def record_score():
 # ======================================================================================================================
 
 def get_scores():
+    """
+    Gets scores from, "Scores.txt" and puts them into the, "scores" list.
+    Gets the top 5 scores from the, "scores" list and puts them into the, "high_scores" list
+    """
+
     opening_the_list = open("Scores.txt", "r")
 
     true_a = [line.split(",") for line in opening_the_list.readlines()]  # splits each line of the text file into a list
@@ -70,7 +81,7 @@ def get_scores():
 
     opening_the_list.close()
 
-    true_scores = [int(i) for i in scores]
+    true_scores = [int(i) for i in scores]  # Turns string of numbers to integer values
 
     for i in range(5):
         try:
@@ -79,7 +90,8 @@ def get_scores():
             high_scores.append(high_score)  # Adds it to, "high_scores" list
 
             true_scores.remove(high_score)  # Removes it from, "true_scores"
-        except ValueError:
+
+        except ValueError:  # If there are not any more scores
             high_scores.append("-")
 
 
@@ -87,6 +99,10 @@ def get_scores():
 # ======================================================================================================================
 
 def print_scores():
+    """
+    Correctly formats and prints out the, "high_scores" list
+    """
+
     for i in high_scores:
         if isinstance(i, int):
             print(str(i))
@@ -124,8 +140,9 @@ def start_music_game():
 
         number_of_songs_used += 1
 
-        # ======================================================================================================================
-        # This section of code randomly chooses the artist and the song
+
+# ======================================================================================================================
+# This section of code randomly chooses the artist and the song
         randomly_chosen_song = randint(0, len(artists_and_songs) - 1)  # picks a random number
 
         if randomly_chosen_song % 2 != 0:  # If the number chose is not on an artist
@@ -147,8 +164,9 @@ def start_music_game():
 
         print("\n")
 
-        # ======================================================================================================================
-        # This section of code deals with point scoring and checking answers
+
+# ======================================================================================================================
+# This section of code deals with point scoring and checking answers
 
         first_guess = input(random_artist + "   " + random_song_to_display + "\n\n")
         # Displays artist and song showing the first letter and replacing the rest with, "*"
@@ -158,7 +176,7 @@ def start_music_game():
 
             print("\n\n+3 Points!\n\n")
 
-        else:
+        else:  # If the answer is incorrect
             second_guess = input("\nTry again!\n\n")
 
             if second_guess.lower().strip().replace(" ", "") == random_song.lower().strip().replace(" ", ""):
@@ -166,7 +184,7 @@ def start_music_game():
 
                 print("\n\n+1 Point!\n\n")
 
-            else:
+            else:  # If the answer is incorrect for the third time
                 print("\n\nYou ran out of tries!\n\n")
 
                 if player_points == 1:
@@ -177,15 +195,16 @@ def start_music_game():
 
                 print("Top High Scores\n\n")
 
-                record_score()
+                record_score()  # (line 43) Records, "player_points" into, "Scores.txt".
 
-                get_scores()
+                get_scores()  # (line 51) Retrieves scores from, "Scores.txt" and puts them in the, "scores" list.
+                # Gets top 5 scores from, "scores" list and puts them in the, "high_scores" list
 
-                print_scores()
+                print_scores()  # (line 89) Correctly formats and prints out the, "high_scores" list
 
                 break
 
-    if len(artists_and_songs) == 0:
+    if len(artists_and_songs) == 0:  # If the player correctly answers all songs
         print("\n\nYou got all of the songs correct!\n\n")
 
         if player_points == 1:
@@ -196,15 +215,16 @@ def start_music_game():
 
         print("Top High Scores\n\n")
 
-        record_score()
+        record_score()  # (line 43) Records, "player_points" into, "Scores.txt".
 
-        get_scores()
+        get_scores()  # (line 51) Retrieves scores from, "Scores.txt" and puts them in the, "scores" list.
 
-        print_scores()
+        print_scores()  # (line 89) Correctly formats and prints out the, "high_scores" list
 
         return
 
     print("\n")
+
 
 # ======================================================================================================================
 # ======================================================================================================================

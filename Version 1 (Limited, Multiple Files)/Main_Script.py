@@ -10,7 +10,7 @@ def main_menu():
 
     print("Play\n\nSign Out\n\nExit\n\n")
 
-    picked_option = input()
+    picked_option = input()  # User chooses their option
 
     print("\n\n")
 
