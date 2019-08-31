@@ -1,6 +1,6 @@
 # Variables
 
-usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 10
+usernames_and_passwords = []  # This list stores the users and their passwords from, "Users.txt" refer to line 11
 
 
 # ======================================================================================================================
