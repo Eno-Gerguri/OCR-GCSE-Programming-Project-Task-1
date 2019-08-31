@@ -1,4 +1,4 @@
-# OCR-GCSE-Programming-Project-Task-1-for-practise-
+# OCR GCSE Programming Project Task 1
 https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-june-2020.pdf
 
 The point of this project is to practise my basic python skills with a task from the OCR computer science programming projects from June 2019 to 2020.
