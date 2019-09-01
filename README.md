@@ -228,7 +228,7 @@ Title of bug:
 
 Brief description of bug including how to replicate it and where it is caused as well as if it happens all of the time
 
-(If you have one a solution):
+(If you have one, a solution):
 
 brief description how to solve it
 
