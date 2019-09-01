@@ -100,7 +100,7 @@ This works for Mac, Linux and Windows and anybody can run it, nothing extra is n
 
 #### METHOD 1: Using Python in the Command Line
 
-This method is requires that python 3 is installed on your system. This method is a little longer to run the program but significantly faster than the other method.
+This method requires that python 3 is installed on your system. This method is a little longer to run the program but significantly faster than the other method.
 
 **1.** Make sure that python is installed on your operating system and your python directory is in your PATH
 
