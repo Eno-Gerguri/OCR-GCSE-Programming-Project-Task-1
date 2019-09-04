@@ -489,14 +489,27 @@ def add_song():
 
 def change_song():
 
+    artist_is_correct = False
+
     print("Change Song\n\n")
 
-    original_artist = input("Type in the Artist's name: ")
+    option_to_change_artist_or_song_name = input("Would You like to change the:\n\nSong Name\n\nor\n\nArtists Name\n\n")
 
-    for i, line in enumerate(artists_and_songs):
+    print("\n\n")
 
-        if 1:
-            pass
+    if option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "songname":
+        pass  # Change song name
+
+    elif option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "artistsname":
+        pass  # Change artists name
+
+    else:
+        print("That is invalid. Check your spelling.\n\n")
+
+        settings()
+
+        return
+
 
 
 # ======================================================================================================================
