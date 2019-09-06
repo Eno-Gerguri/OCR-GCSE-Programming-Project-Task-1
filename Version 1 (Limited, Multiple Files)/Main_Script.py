@@ -488,8 +488,12 @@ def add_song():
 # ======================================================================================================================
 
 def change_song():
+    """
+    Takes in user input whether they want to change the artist or song and can change them into whatever they want.
+    """
 
     artist_is_correct = False
+    song_name_is_correct = False
 
     print("Change Song\n\n")
 
@@ -497,11 +501,97 @@ def change_song():
 
     print("\n\n")
 
+# ======================================================================================================================
+# This section of code changes the song name
+
     if option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "songname":
-        pass  # Change song name
+        for i in artists_and_songs:
+            if i % 2 != 0:
+                print(i)  # Prints out song names
+        print("\n")
+
+        old_song_name = input("Enter old song name: ")  # Gets the existing song
+
+        for i, line in enumerate(artists_and_songs):
+            if i % 2 != 0:
+                if old_song_name == line:
+                    song_name_is_correct = True  # Checks, "artists_and_songs" for the song name.
+                    # Tells the program that the song is correct and that it exists
+
+        if song_name_is_correct:
+            new_song_name = input("Enter your new song name: ")
+            new_song_name_confirmation = input("Re-enter your new song name: ")
+
+            if new_song_name == new_song_name_confirmation:
+                for i, line in enumerate(artists_and_songs):
+                    if i % 2 != 0:  # Songs are located on the odd spots of the list
+                        if new_song_name == line:
+                            artists_and_songs.insert(i, new_song_name)
+                            artists_and_songs.pop(i + 1)
+
+                            artists_and_songs_into_song_list_txt()
+                            # Changes the song name and puts it into, "Song_List.txt"
+
+            else:
+                print("Song Names do not match. Check your spelling.\n\n")
+
+                settings()
+
+                return
+
+        else:
+            print("That is invalid. Check your spelling.\n\n")
+
+            settings()
+
+            return
+
+# ======================================================================================================================
+# This section of code changes the artist
 
     elif option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "artistsname":
-        pass  # Change artists name
+        for i in artists_and_songs:
+            if i % 2 == 0:
+                print(i)  # Prints out artists
+        print("\n")
+
+        old_artist_name = input("Enter old artist name: ")
+
+        for i, line in enumerate(artists_and_songs):
+            if i % 2 == 0:
+                if old_artist_name == line:
+                    artist_is_correct = True  # Checks, "artists_and_songs" for the artist.
+                    # Tells the program that the artist is correct and that it exists
+
+        if artist_is_correct:
+            new_artist = input("Enter your new artist: ")
+            new_artist_confirmation = input("Re-enter your artists name: ")
+
+            if new_artist == new_artist_confirmation:
+                for i, line in enumerate(artists_and_songs):  # Artists are located on the odd spots of the list
+                    if i % 2 == 0:
+                        if new_artist == line:
+                            artists_and_songs.insert(i, new_artist)
+                            artists_and_songs.pop(i + 1)
+
+                            artists_and_songs_into_song_list_txt()
+                            # Changes the artist and puts it into, "Song_List.txt"
+
+            else:
+                print("Artists do not match. Check your spelling.\n\n")
+
+                settings()
+
+                return
+
+        else:
+            print("That is invalid. Check your spelling.\n\n")
+
+            settings()
+
+            return
+
+# ======================================================================================================================
 
     else:
         print("That is invalid. Check your spelling.\n\n")
@@ -509,7 +599,6 @@ def change_song():
         settings()
 
         return
-
 
 
 # ======================================================================================================================
