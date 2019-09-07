@@ -168,7 +168,7 @@ def settings():
 
         print("Song Settings\n\n")
 
-        print("Add Song\n\nEdit Song\n\nDelete Song\n\nBack\n\n")
+        print("Add Song\n\nDelete Song\n\nBack\n\n")
 
         picked_song_setting = input()
 
@@ -176,15 +176,11 @@ def settings():
 
         if picked_song_setting.lower().strip().replace(" ", "") == "addsong":
 
-            pass  # TODO: add a add song function
-
-        elif picked_song_setting.lower().strip().replace(" ", "") == "editsong":
-
-            pass  # TODO: add a edit song function
+            add_song()
 
         elif picked_song_setting.lower().strip().replace(" ", "") == "deletesong":
 
-            pass  # TODO: add a delete song function
+            delete_song()
 
         elif picked_song_setting.lower().strip().replace(" ", "") == "back":
 
@@ -210,9 +206,9 @@ def settings():
 
         print("\n\n")
 
-        if picked_score_setting.lower().strip().replace(" ", "") == "View Scores":
+        if picked_score_setting.lower().strip().replace(" ", "") == "viewscores":
 
-            pass  # TODO: add a view scores function
+            view_scores()
 
         elif picked_score_setting.lower().strip().replace(" ", "") == "Delete All Scores":
 
@@ -487,132 +483,102 @@ def add_song():
 # ======================================================================================================================
 # ======================================================================================================================
 
-def change_song():
-    """
-    Takes in user input whether they want to change the artist or song and can change them into whatever they want.
-    """
+def delete_song():
 
-    artist_is_correct = False
-    song_name_is_correct = False
+    song_is_correct = False
 
-    print("Change Song\n\n")
+    print("Delete Song\n\n")
 
-    option_to_change_artist_or_song_name = input("Would You like to change the:\n\nSong Name\n\nor\n\nArtists Name\n\n")
+    for i, line in enumerate(artists_and_songs):
+        # Prints all artists and songs with a line space between each artist and song
 
+        global song_counter
+        song_counter = 0
+
+        if song_counter < 3:
+            print(line)
+            song_counter += 1
+
+        elif song_counter == 3:
+            print("\n")
+            song_counter = 0
+
+    song_wanted_to_be_destroyed = input("\n\nEnter the name of the song or artist you wish to delete: ")
     print("\n\n")
 
-# ======================================================================================================================
-# This section of code changes the song name
+    for i, line in enumerate(artists_and_songs):
+        if song_wanted_to_be_destroyed == line:
+            song_is_correct = True
 
-    if option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "songname":
-        for i in artists_and_songs:
-            if i % 2 != 0:
-                print(i)  # Prints out song names
-        print("\n")
-
-        old_song_name = input("Enter old song name: ")  # Gets the existing song
-
+    if song_is_correct:
         for i, line in enumerate(artists_and_songs):
-            if i % 2 != 0:
-                if old_song_name == line:
-                    song_name_is_correct = True  # Checks, "artists_and_songs" for the song name.
-                    # Tells the program that the song is correct and that it exists
+            if i % 2 == 0 and song_wanted_to_be_destroyed == line:  # If it is an artist and is found
+                artists_and_songs.pop(i + 1)
+                artists_and_songs.pop(i)
 
-        if song_name_is_correct:
-            new_song_name = input("Enter your new song name: ")
-            new_song_name_confirmation = input("Re-enter your new song name: ")
+                artists_and_songs_into_song_list_txt()
 
-            if new_song_name == new_song_name_confirmation:
-                for i, line in enumerate(artists_and_songs):
-                    if i % 2 != 0:  # Songs are located on the odd spots of the list
-                        if new_song_name == line:
-                            artists_and_songs.insert(i, new_song_name)
-                            artists_and_songs.pop(i + 1)
-
-                            artists_and_songs_into_song_list_txt()
-                            # Changes the song name and puts it into, "Song_List.txt"
-
-            else:
-                print("Song Names do not match. Check your spelling.\n\n")
+                print("Successfully Deleted Song!\n\n")
 
                 settings()
 
                 return
 
-        else:
-            print("That is invalid. Check your spelling.\n\n")
+            elif i % 2 != 0 and song_wanted_to_be_destroyed == line:
+                artists_and_songs.pop(i - 1)
+                try:
+                    artists_and_songs.pop(i)
 
-            settings()
+                except IndexError:
+                    artists_and_songs.pop(i - 1)
 
-            return
+                artists_and_songs_into_song_list_txt()
 
-# ======================================================================================================================
-# This section of code changes the artist
-
-    elif option_to_change_artist_or_song_name.lower().strip().replace(" ", "") == "artistsname":
-        for i in artists_and_songs:
-            if i % 2 == 0:
-                print(i)  # Prints out artists
-        print("\n")
-
-        old_artist_name = input("Enter old artist name: ")
-
-        for i, line in enumerate(artists_and_songs):
-            if i % 2 == 0:
-                if old_artist_name == line:
-                    artist_is_correct = True  # Checks, "artists_and_songs" for the artist.
-                    # Tells the program that the artist is correct and that it exists
-
-        if artist_is_correct:
-            new_artist = input("Enter your new artist: ")
-            new_artist_confirmation = input("Re-enter your artists name: ")
-
-            if new_artist == new_artist_confirmation:
-                for i, line in enumerate(artists_and_songs):  # Artists are located on the odd spots of the list
-                    if i % 2 == 0:
-                        if new_artist == line:
-                            artists_and_songs.insert(i, new_artist)
-                            artists_and_songs.pop(i + 1)
-
-                            artists_and_songs_into_song_list_txt()
-                            # Changes the artist and puts it into, "Song_List.txt"
-
-            else:
-                print("Artists do not match. Check your spelling.\n\n")
+                print("Successfully Deleted Song!\n\n")
 
                 settings()
 
                 return
 
-        else:
-            print("That is invalid. Check your spelling.\n\n")
+    print("Song Successfully Deleted!\n\n")
 
-            settings()
-
-            return
-
-# ======================================================================================================================
-
-    else:
-        print("That is invalid. Check your spelling.\n\n")
-
-        settings()
-
-        return
-
-
-# ======================================================================================================================
-# ======================================================================================================================
-
-def delete_song():
-    pass
+    settings()
 
 
 # ======================================================================================================================
 # ======================================================================================================================
 
 def view_scores():
-    pass
+    print("View Scores\n\n")
+
+    opening_the_list = open("Scores.txt", "r")
+
+    true_a = [line.split(",") for line in opening_the_list.readlines()]  # splits each line of the text file into a list
+
+    true_a = sum(true_a, [])
+
+    for i in true_a:
+        # Takes the extra "\n" from each string and replaces them accordingly
+
+        a = i.strip("\n")
+
+        true_a.insert(true_a.index(i), a)
+
+        true_a.remove(i)
+
+    true_a = [int(i) for i in true_a]
+
+    true_a = sorted(true_a)
+
+    for i in true_a:
+        print(str(i) + "\n")
+
+    opening_the_list.close()
+
+    print("Back\n\n")
+    input()
+
+    settings()
 
 
 # ====================================================Program Starts====================================================
