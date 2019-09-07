@@ -3,6 +3,8 @@ https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-jun
 
 The point of this project is to practise my basic python skills with a task from the OCR computer science programming projects from June 2019 to 2020.
 
+This is my first ever python project.
+
 ## Table of Contents
 
 * [Task](#Task)
@@ -18,7 +20,7 @@ The point of this project is to practise my basic python skills with a task from
     * [METHOD 2: Running the Executable](#METHOD-2-Running-the-Executable)
     
   * [Editing Version 1](#Editing-Version-1)
-   
+  
     * [Editing Users](#Editing-Users)
     
       * [Making a New Account Manually](#Making-a-New-Account-Manually)
@@ -42,7 +44,7 @@ The point of this project is to practise my basic python skills with a task from
       * [Changing an Already Existing Score Manually](#Changing-an-Already-Existing-Score-Manually)
       
       * [Delete a Specific Score Manually](#Delete-a-Specific-Score-Manually)
-      
+    
   * [Using Version 1](#Using-Version-1)
   
 * [Comments About Code](#Comments-About-Code)
@@ -160,7 +162,7 @@ That's it, you have deleted your account!
 
 #### Editing the Song List
 
-If you want to edit the Song List you can do so within the program just go into the, "Settings" menu and go into the Song List menu to add, modify and delete songs. Nonetheless, you can manually change the Song List that you play through by editing, "Song_List.txt". Here's how you do it:
+If you want to edit the Song List you can do so within the program just go into the, "Settings" menu and go into the Song List menu to add and delete songs. Nonetheless, you can manually change the Song List that you play through by editing, "Song_List.txt". Here's how you do it:
 
 ##### Adding a Song Manually
 
@@ -250,6 +252,8 @@ One of the things I did with the code is that instead of putting "else:" stateme
 
 One import was necessary and that was the, "randint" function from the random module built into python. It was absolutely unavoidable
 as I had to randomly generate a number to pick a song from the list.
+
+Code is a bit technically follows PEP-8 Standards however line breaks are not used properly and code is not properly formatted with line breaks. However, future projects will be correctly and nicely formatted in terms of line breaks.
 
 ## Bugs
 
