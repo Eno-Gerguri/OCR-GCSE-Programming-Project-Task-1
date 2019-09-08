@@ -7,55 +7,55 @@ This is my first ever python project.
 
 ## Table of Contents
 
-* [Task](#Task)
+*  [Task](#Task)
 
-* [Version 1](#Version-1)
+*  [Version 1](#Version-1)
 
-  * [Why?](#Why)
+  *  [Why?](#Why)
   
-  * [Installation](#Installation)
+  *  [Installation](#Installation)
   
-    * [METHOD 1: Using Python in the Command Line](#METHOD-1-Using-Python-in-the-Command-Line)
+    *  [METHOD 1: Using Python in the Command Line](#METHOD-1-Using-Python-in-the-Command-Line)
     
-    * [METHOD 2: Running the Executable](#METHOD-2-Running-the-Executable)
+    *  [METHOD 2: Running the Executable](#METHOD-2-Running-the-Executable)
     
-  * [Editing Version 1](#Editing-Version-1)
+  *  [Editing Version 1](#Editing-Version-1)
   
-    * [Editing Users](#Editing-Users)
+    *  [Editing Users](#Editing-Users)
     
-      * [Making a New Account Manually](#Making-a-New-Account-Manually)
+      *  [Making a New Account Manually](#Making-a-New-Account-Manually)
       
-      * [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
+      *  [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
       
-      * [Deleting your Account Manually](#Deleting-your-Account-Manually)
+      *  [Deleting your Account Manually](#Deleting-your-Account-Manually)
       
-    * [Editing the Song List](#Editing-the-Song-List)
+    *  [Editing the Song List](#Editing-the-Song-List)
     
-      * [Adding a Song Manually](#Adding-a-Song-Manually)
+      *  [Adding a Song Manually](#Adding-a-Song-Manually)
       
-      * [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
+      *  [Editing an Existing Account Manually](#Editing-an-Existing-Account-Manually)
       
-      * [Deleting your Account Manually](#Deleting-your-Account-Manually)
+      *  [Deleting your Account Manually](#Deleting-your-Account-Manually)
       
-    * [Editing Scores](#Editing-Scores)
+    *  [Editing Scores](#Editing-Scores)
     
-      * [Adding a Score Manually](#Adding-a-Score-Manually)
+      *  [Adding a Score Manually](#Adding-a-Score-Manually)
       
-      * [Changing an Already Existing Score Manually](#Changing-an-Already-Existing-Score-Manually)
+      *  [Changing an Already Existing Score Manually](#Changing-an-Already-Existing-Score-Manually)
       
-      * [Delete a Specific Score Manually](#Delete-a-Specific-Score-Manually)
+      *  [Delete a Specific Score Manually](#Delete-a-Specific-Score-Manually)
     
-  * [Using Version 1](#Using-Version-1)
+  *  [Using Version 1](#Using-Version-1)
   
-* [Comments About Code](#Comments-About-Code)
+*  [Comments About Code](#Comments-About-Code)
 
-* [Bugs](#Bugs)
+*  [Bugs](#Bugs)
 
-* [Contributions](#Contributions)
+*  [Contributions](#Contributions)
 
-* [Credits](#Credits)
+*  [Credits](#Credits)
 
-* [License](#License)
+*  [License](#License)
 
 ## Task
 
