@@ -3,7 +3,7 @@ https://www.ocr.org.uk/Images/503195-programming-project-tasks-june-2019-and-jun
 
 The point of this project is to practise my basic python skills with a task from the OCR computer science programming projects from June 2019 to 2020.
 
-This is my first ever python project.
+This is my first ever python project so I will be using this project as an opportunity to see what I have done wrong afterwards to improve on in the future.
 
 ## Table of Contents
 
@@ -54,6 +54,8 @@ This is my first ever python project.
 * [Contributions](#Contributions)
 
 * [Credits](#Credits)
+
+* [Evaluation](#Evaluation)
 
 * [License](#License)
 
@@ -266,6 +268,10 @@ This repository cannot be contributed to but you can give feedback to enogerguri
 ## Credits
 
 [Eno Gerguri](https://github.com/Eno-Gerguri "Eno Gerguri's Profile")
+
+## Evaluation
+
+Overall, in this project I have achieved a working solution to the task. However, my code is: difficuilt to read; does not utilise all of Python's key features when they were necessary e.g using parameters and over-using global namespaces and variables for no particular reason and does not deliver on additional features that were going to be added. I am finished with this project as its purpose has been fulfilled by telling me exactly what I have done wrong and need to improve upon, which is the above. I have taken invaluable experience from my first Python project and look forward to doing more.
 
 ## License
 
